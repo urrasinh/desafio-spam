@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 
-function enviar(to, subject, text) {
+const enviar = (to, subject, text, html) => {
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -14,6 +14,7 @@ function enviar(to, subject, text) {
         subject,
         text,
         html
+        
     }
     transporter.sendMail(mailOptions, (err, data) => {
         if (err) console.log(err)

@@ -17,7 +17,12 @@ http
             let { correos, asunto, contenido } = url.parse(req.url, true).query
             const dataIndicador = await llamadoApi()
             console.log(dataIndicador)
-            enviar(correos.split(','), asunto, contenido)
+            const contenidoConIndicadores = contenido + `
+            El valor del Dolar del día de hoy es ${dataIndicador.data.dolar.valor} <br>
+            El valor del Euro del día de hoy es ${dataIndicador.data.euro.valor} <br>
+            El valor del Uf del día de hoy es ${dataIndicador.data.uf.valor} <br>
+            El valor del Utm del día de hoy es ${dataIndicador.data.utm.valor} <br>`
+            enviar(correos.split(','), asunto, contenido, contenidoConIndicadores)
             res.end('enviado')
         }
     })
