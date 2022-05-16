@@ -1,7 +1,6 @@
 {
   "name": "desafio-spam",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +11,15 @@
     "axios": "^0.27.2",
     "nodemailer": "^6.7.5",
     "uuid": "^8.3.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urrasinh/desafio-spam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/urrasinh/desafio-spam/issues"
+  },
+  "homepage": "https://github.com/urrasinh/desafio-spam#readme",
+  "description": ""
 }
